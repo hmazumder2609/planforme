@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx --version)",
+      "WebSearch",
+      "Bash(npx create-next-app@latest . --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Read(//c/Users/hmazu/Documents/Projeects/**)",
+      "Bash(npx create-next-app@latest planforme-temp --ts --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --yes)",
+      "Bash(cp -r /c/Users/hmazu/Documents/Projeects/planforme-temp/* /c/Users/hmazu/Documents/Projeects/planforme/)",
+      "Bash(cp -r /c/Users/hmazu/Documents/Projeects/planforme-temp/.* /c/Users/hmazu/Documents/Projeects/planforme/)",
+      "Bash(rm -rf /c/Users/hmazu/Documents/Projeects/planforme-temp)",
+      "Bash(npx shadcn@latest init -y --style new-york)",
+      "Bash(npx shadcn@latest init -y)",
+      "Bash(npx shadcn@latest init -d)"
+    ]
+  }
+}
