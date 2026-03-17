@@ -12,7 +12,9 @@
       "Bash(rm -rf /c/Users/hmazu/Documents/Projeects/planforme-temp)",
       "Bash(npx shadcn@latest init -y --style new-york)",
       "Bash(npx shadcn@latest init -y)",
-      "Bash(npx shadcn@latest init -d)"
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npx shadcn@latest add dialog input select badge dropdown-menu separator tooltip command popover calendar card sheet avatar skeleton tabs scroll-area textarea label checkbox switch -y)",
+      "Bash(npm install:*)"
     ]
   }
 }
