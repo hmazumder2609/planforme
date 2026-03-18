@@ -2,11 +2,13 @@ import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import { SupabaseAdapter } from "@auth/supabase-adapter";
 
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY ?? "";
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  adapter: SupabaseAdapter({
-    url: process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    secret: process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  }),
+  adapter: supabaseUrl && supabaseServiceKey
+    ? SupabaseAdapter({ url: supabaseUrl, secret: supabaseServiceKey })
+    : undefined,
   providers: [
     Google({
       clientId: process.env.AUTH_GOOGLE_ID,
@@ -32,7 +34,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       if (isOnApp) {
         if (isLoggedIn) return true;
-        return false; // Redirect unauthenticated users to login page
+        return false;
       }
       return true;
     },
