@@ -68,13 +68,13 @@ export function AppHeader() {
         <ThemeToggle />
 
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full">
-              <Avatar className="h-7 w-7">
-                <AvatarImage src={user?.image || undefined} alt={user?.name || "User"} />
-                <AvatarFallback className="text-xs">{initials}</AvatarFallback>
-              </Avatar>
-            </Button>
+          <DropdownMenuTrigger
+            render={<Button variant="ghost" size="icon" className="h-8 w-8 rounded-full" />}
+          >
+            <Avatar className="h-7 w-7">
+              <AvatarImage src={user?.image || undefined} alt={user?.name || "User"} />
+              <AvatarFallback className="text-xs">{initials}</AvatarFallback>
+            </Avatar>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem

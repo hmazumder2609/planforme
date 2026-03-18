@@ -36,7 +36,7 @@ export default function RootLayout({
         <SessionProvider>
           <ThemeProvider>
             <QueryProvider>
-              <TooltipProvider delayDuration={300}>
+              <TooltipProvider delay={300}>
                 {children}
                 <Toaster richColors position="bottom-right" />
               </TooltipProvider>
